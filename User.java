@@ -6,15 +6,13 @@ public class User {
     private String lastName;
     private String email;
     private String password;
-    private boolean isDoctor;
 
-    public User(int id, String firstName, String lastName, String email, String password, boolean isDoctor) {
+    public User(int id, String firstName, String lastName, String email, String password) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
-        this.isDoctor = isDoctor;
     }
 
     public int getId() {
@@ -55,14 +53,6 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public boolean isDoctor() {
-        return isDoctor;
-    }
-
-    public void setDoctor(boolean doctor) {
-        isDoctor = doctor;
     }
 
    

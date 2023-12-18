@@ -9,5 +9,9 @@ public class MedicineReminder {
     private String startDate;
     private String endDate;
 
+    public boolean isDueToday() {
+        return false;
+    }
+
     // Constructor, getters, and setters
 }

@@ -36,8 +36,6 @@ public class RecommendationSystem {
             recommendations.add("You're not reaching the recommended daily step count. " +
                     "Try to incorporate more walking or other physical activities into your daily routine.");
         }
-//
-//        // Add more health data analysis and recommendations as needed
 
         return recommendations;
     }

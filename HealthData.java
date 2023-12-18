@@ -1,76 +1,77 @@
+import java.sql.Timestamp;
 
 public class HealthData {
-    private int id;
-    private int userId;
-    private double weight;
-    private double height;
-    private int steps;
-    private int heartRate;
-    private String date;
+    private final int id;
+    private final int userId;
+    private final double weightKg;
+    private final double heightMeters;
+    private final int steps;
+    private final int heartRate;
+    private final int bpHigh;
+    private final int bpLow;
+    private final int caloricIntake;
+    private final String checkupDate;
 
-    public HealthData(int id, int userId, double weight, double height, int steps, int heartRate, String date) {
+    public HealthData(int id,
+                      int userId,
+                      double weight,
+                      double height,
+                      int steps,
+                      int heartRate,
+                      String checkupDate,
+                      int bpHigh,
+                      int bpLow,
+                      int caloricIntake) {
         this.id = id;
         this.userId = userId;
-        this.weight = weight;
-        this.height = height;
+        this.weightKg = weight;
+        this.heightMeters = height;
         this.steps = steps;
         this.heartRate = heartRate;
-        this.date = date;
+        this.bpHigh = bpHigh;
+        this.bpLow = bpLow;
+        this.caloricIntake = caloricIntake;
+        this.checkupDate = checkupDate;
     }
-
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public int getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
-
     public double getWeight() {
-        return weight;
-    }
-
-    public void setWeight(double weight) {
-        this.weight = weight;
+        return weightKg;
     }
 
     public double getHeight() {
-        return height;
-    }
-
-    public void setHeight(double height) {
-        this.height = height;
+        return heightMeters;
     }
 
     public int getSteps() {
         return steps;
     }
 
-    public void setSteps(int steps) {
-        this.steps = steps;
-    }
-
     public int getHeartRate() {
         return heartRate;
     }
 
-    public void setHeartRate(int heartRate) {
-        this.heartRate = heartRate;
+    public int getBpHigh() {
+        return bpHigh;
     }
 
-    public String getDate() {
-        return date;
+    public int getBpLow() {
+        return bpLow;
     }
-    public void setDate(String date) {
-        this.date = date;
+
+    public int getCaloricIntake() {
+        return caloricIntake;
     }
+
+    public String getCheckupDate() {
+        return checkupDate;
+    }
+
 }
