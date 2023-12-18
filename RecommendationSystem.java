@@ -1,7 +1,7 @@
 
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
 
 /**
  * In this basic version of the
@@ -15,28 +15,24 @@ import java.util.List;
  */
 
 public class RecommendationSystem {
-    private static final int MIN_HEART_RATE = 60;
-    private static final int MAX_HEART_RATE = 100;
-    private static final int MIN_STEPS = 10000;
+    private final Collection<RecommendationStrategy> strategies;
 
-    public List<String> generateRecommendations(HealthData healthData) {
-        List<String> recommendations = new ArrayList<>();
+    public RecommendationSystem() {
+        strategies = new ArrayList<>();
+        strategies.add(new StepCountRecommendation());
+        strategies.add(new HighBPRecommendation());
+        strategies.add(new LowBPRecommendation());
+        // TODO add some stuff for weight, calories, etc
+    }
 
-//        // Analyze heart rate
-        int heartRate = healthData.getHeartRate();
-        if (heartRate < MIN_HEART_RATE) {
-            recommendations.add("Your heart rate is lower than the recommended range. " +
-                    "Consider increasing your physical activity to improve your cardiovascular health.");
+    public Collection<Recommendation> generateRecommendations(HealthData healthData) {
+        Collection<Recommendation> recommendations = new ArrayList<>();
+        for (RecommendationStrategy r : strategies) {
+            if (r.isRecommended(healthData)) {
+                Recommendation recommendation = new Recommendation(r.getDescription(), r.getResolution(), healthData.getId());
+                recommendations.add(recommendation);
+            }
         }
-//
-//
-//        // Analyze steps
-        int steps = healthData.getSteps();
-        if (steps < MIN_STEPS) {
-            recommendations.add("You're not reaching the recommended daily step count. " +
-                    "Try to incorporate more walking or other physical activities into your daily routine.");
-        }
-
         return recommendations;
     }
 }

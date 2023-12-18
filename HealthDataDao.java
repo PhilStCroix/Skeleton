@@ -2,6 +2,7 @@
 import java.sql.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Collection;
 
 public class HealthDataDao {
     private static final SimpleDateFormat FORMAT = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -28,6 +29,7 @@ public class HealthDataDao {
             e.printStackTrace();
         }
     }
+
     // public boolean createHealthData(HealthData healthData) { /* insert health data into database */ }
   //  public HealthData getHealthDataById(int id) { /* get health data by id from database */ }
   //  public List<HealthData> getHealthDataByUserId(int userId) { /* get health data by user id from database */ }
