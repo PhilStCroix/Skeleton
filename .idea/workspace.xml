@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="99bfd5c9-12fd-4069-a37c-5d6301f8d19d" name="Changes" comment="menu added">
+      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/DatabaseConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/DatabaseConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/Doctor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/Doctor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/HealthData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/HealthData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/HealthDataDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/HealthDataDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/HealthMonitoringApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/HealthMonitoringApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/MedicineReminder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/MedicineReminder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/RecommendationSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/RecommendationSystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Skeleton/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Skeleton/UserDaoExample.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/lib/jBCrypt-0.4.1.jar!/org/mindrot/jbcrypt/BCrypt.class" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2ZgNzvijQ1ifiQEwIrYnm9Vnv3G" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HealthMonitoringApp.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Software Development/Skeleton&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="HealthMonitoringApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="HealthMonitoringApp" />
+      <module name="Skeleton" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.HealthMonitoringApp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-8336523bb0d9-657b72ed" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="99bfd5c9-12fd-4069-a37c-5d6301f8d19d" name="Changes" comment="" />
+      <created>1702840027986</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702840027986</updated>
+    </task>
+    <task id="LOCAL-00001" summary="initial commit, made constructor and getters/setters for HealthData">
+      <option name="closed" value="true" />
+      <created>1702843084184</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702843084184</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added gitignore">
+      <option name="closed" value="true" />
+      <created>1702861825594</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702861825594</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ignore build stuff">
+      <option name="closed" value="true" />
+      <created>1702861938032</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702861938032</updated>
+    </task>
+    <task id="LOCAL-00004" summary="remove duplicate gitignore">
+      <option name="closed" value="true" />
+      <created>1702861990481</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702861990481</updated>
+    </task>
+    <task id="LOCAL-00005" summary="built out some functionality for Users/ HealthData nad logins">
+      <option name="closed" value="true" />
+      <created>1702862067394</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702862067394</updated>
+    </task>
+    <task id="LOCAL-00006" summary="lots of functionality, mostly tested">
+      <option name="closed" value="true" />
+      <created>1702869418104</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702869418104</updated>
+    </task>
+    <task id="LOCAL-00007" summary="lots of functionality, mostly tested">
+      <option name="closed" value="true" />
+      <created>1702967174844</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1702967174844</updated>
+    </task>
+    <task id="LOCAL-00008" summary="menu added">
+      <option name="closed" value="true" />
+      <created>1702967224049</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1702967224049</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit, made constructor and getters/setters for HealthData" />
+    <MESSAGE value="added gitignore" />
+    <MESSAGE value="ignore build stuff" />
+    <MESSAGE value="remove duplicate gitignore" />
+    <MESSAGE value="built out some functionality for Users/ HealthData nad logins" />
+    <MESSAGE value="add terminal menu" />
+    <MESSAGE value="lots of functionality, mostly tested" />
+    <MESSAGE value="menu added" />
+    <option name="LAST_COMMIT_MESSAGE" value="menu added" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/HealthMonitoringApp.java</url>
+          <line>119</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
