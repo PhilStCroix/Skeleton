@@ -7,24 +7,48 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 
 
 public class HealthMonitoringApp {
     private static UserDao userDao = new UserDao();
-
+    private static HealthDataDao healthDataDao = new HealthDataDao();
     private final RecommendationSystem recommendationSystem = new RecommendationSystem();
 
     public static void main(String[] args) {
-        systemTest();
+//        systemTest();
         // prompt the user for their email and password, or register a new user
 
-        // should be different for doctors and patients
-        // show a menu for
-            // 1. Add health data
-            // 2. Generate recommendations
-            // 3. Add a medicine reminder
-        //
+        Scanner scanner = new Scanner(System.in);
+        System.out.println();
+        System.out.println("Welcome to the Skeleton Health Monitoring System\n");
+
+        while (true) {
+            System.out.println("Options");
+            System.out.println("1. Login");
+            System.out.println("2. Register");
+            System.out.println("3. Exit\n");
+            System.out.print("Enter your choice: ");
+
+            int choice = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (choice) {
+                case 1:
+                    loginUser(scanner);
+                    break;
+                case 2:
+                    registerUser(scanner);
+                    break;
+                case 3:
+                    System.out.println("Goodbye!");
+                    return;
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }
+
+        }
     }
 
     /**
@@ -141,17 +165,107 @@ public class HealthMonitoringApp {
     }
 
 
-    public boolean loginUser(String email, String password) {
+    public static boolean loginUser(String email, String password) {
         //implement method to login user.
         User user = userDao.getUserByEmail(email);
 
         if (user != null) {
             return BCrypt.checkpw(password, user.getPassword());
         }
-
         return false;
-
     }
+
+    public static void loginUser(Scanner scanner) {
+
+        System.out.println("\nEnter your email: ");
+        String email = scanner.nextLine();
+
+        System.out.println("Enter your password: ");
+        String password = scanner.nextLine();
+
+        HealthMonitoringApp app = new HealthMonitoringApp();
+        if (app.loginUser(email, password)) {
+            System.out.println("Login successful!\n");
+            System.out.println("Welcome Back, " + email + "!\n");
+        } else {
+            System.out.println("Invalid email or password. Please try again.\n");
+        }
+    }
+
+    public static void registerUser(Scanner scanner) {
+
+        System.out.println("\nSelect user type");
+        System.out.println("1. Patient");
+        System.out.println("2. Doctor");
+        System.out.println("3. Exit");
+        System.out.print("Enter your choice: ");
+
+        int userTypeChoice = scanner.nextInt();
+        scanner.nextLine();
+
+        if (userTypeChoice == 1) {
+            System.out.print("Enter your email: ");
+            String email = scanner.nextLine();
+
+            System.out.print("Enter your password: ");
+            String password = scanner.nextLine();
+
+            System.out.print("Enter your first name: ");
+            String firstName = scanner.nextLine();
+
+            System.out.print("Enter your last name: ");
+            String lastName = scanner.nextLine();
+
+            // Assuming you want to register patients by default
+            User newUser = new User(10, firstName, lastName, email, password);
+
+            // Save the new user to the database
+            boolean registrationSuccess = UserDao.createUser(newUser);
+
+            if (registrationSuccess) {
+                System.out.println("Welcome to the Skeleton Health Monitoring System, " + firstName + "!");
+                loginUser(email, password);
+            } else {
+                System.out.println("Registration failed. Please try again.");
+            }
+
+        } else if (userTypeChoice == 2) {
+            System.out.print("Enter your email: ");
+            String email = scanner.nextLine();
+
+            System.out.print("Enter your password: ");
+            String password = scanner.nextLine();
+
+            System.out.print("Enter your first name: ");
+            String firstName = scanner.nextLine();
+
+            System.out.print("Enter your last name: ");
+            String lastName = scanner.nextLine();
+
+            System.out.print("Enter your specialization: ");
+            String specialization = scanner.nextLine();
+
+            System.out.print("Enter your medical license number: ");
+            String medicalLicenseNumber = scanner.nextLine();
+
+            // Save the new doctor to the database
+            Doctor newDoctor = new Doctor(10, firstName, lastName, email, password, medicalLicenseNumber, specialization);
+
+            boolean registrationSuccess = UserDao.createDoctor(newDoctor);
+            if (registrationSuccess) {
+                System.out.println("Welcome to the Skeleton Health Monitoring System, Dr." + lastName + "!");
+                loginUser(email, password);
+            } else {
+                System.out.println("Registration failed. Please try again.");
+            }
+        } else if (userTypeChoice == 3) {
+            return;
+        } else {
+            System.out.println("Invalid choice. Please try again.");
+            registerUser(scanner);
+        }
+    }
+
 
 
     /**

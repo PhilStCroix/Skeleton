@@ -2,6 +2,7 @@
 import java.sql.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Collection;
 
 public class HealthDataDao {
@@ -29,6 +30,8 @@ public class HealthDataDao {
             e.printStackTrace();
         }
     }
+
+
 
     // public boolean createHealthData(HealthData healthData) { /* insert health data into database */ }
   //  public HealthData getHealthDataById(int id) { /* get health data by id from database */ }
